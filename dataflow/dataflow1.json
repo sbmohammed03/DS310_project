@@ -1,0 +1,139 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Parquet11",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Parquet14",
+						"type": "DatasetReference"
+					},
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
+					}
+				}
+			],
+			"transformations": [
+				{
+					"name": "select1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          CountryName as string,",
+				"          CountryCode as string,",
+				"          RegionName as string,",
+				"          RegionCode as string,",
+				"          Jurisdiction as string,",
+				"          Date as timestamp,",
+				"          SchoolClose as double,",
+				"          FlagC1 as boolean,",
+				"          WorkplaceClose as double,",
+				"          FlagC2 as boolean,",
+				"          CancelPublicEvents as double,",
+				"          FlagC3 as boolean,",
+				"          RestrictionsOnGatherings as double,",
+				"          FlagC4 as boolean,",
+				"          ClosePT as double,",
+				"          FlagC5 as boolean,",
+				"          SAHReqs as double,",
+				"          FlagC6 as boolean,",
+				"          MovementRestrictions as double,",
+				"          FlagC7 as boolean,",
+				"          InternationalTravelControls as double,",
+				"          IncomeSupport as double,",
+				"          FlagE1 as boolean,",
+				"          DebtContractRelief as double,",
+				"          FiscalMeasures as double,",
+				"          InternationalSupport as double,",
+				"          PublicInfoCampaign as double,",
+				"          FlagH1 as boolean,",
+				"          TestingPolicy as double,",
+				"          ContactTracing as double,",
+				"          InvestmentInHealthcare as double,",
+				"          InvestmentInVaccines as double,",
+				"          FacialCoverings as double,",
+				"          FlagH6 as boolean,",
+				"          VaccinationPolicy as double,",
+				"          FlagH7 as boolean,",
+				"          ProtectionOfElderly as double,",
+				"          FlagH8 as boolean,",
+				"          Wildcare as double,",
+				"          StringencyIndex as double,",
+				"          StringencyIndexForDisplay as double,",
+				"          StringencyLegacyIndex as double,",
+				"          StringencyLegacyIndexForDisplay as double,",
+				"          GovernmentResponseIndex as double,",
+				"          GovernmentResponseIndexForDisplay as double,",
+				"          ContainmentHealthIndex as double,",
+				"          ContainmentHealthIndexForDisplay as double,",
+				"          EconomicSupportIndex as double,",
+				"          EconomicSupportIndexForDisplay as double,",
+				"          ID as string,",
+				"          RID as string,",
+				"          SELF as string,",
+				"          ETAG as string,",
+				"          Attachments as string,",
+				"          TS as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet') ~> source1",
+				"source1 select(mapColumn(",
+				"          each(match(/* All input columns */true()),",
+				"               /* Input name */$$ = $$)",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          CountryName as string,",
+				"          CountryCode as string,",
+				"          SchoolClose as double,",
+				"          WorkplaceClose as double,",
+				"          CancelPublicEvents as double,",
+				"          RestrictionsOnGatherings as double,",
+				"          ClosePT as double,",
+				"          SAHReqs as double,",
+				"          MovementRestrictions as double,",
+				"          InternationalTravelControls as double,",
+				"          IncomeSupport as double,",
+				"          DebtContractRelief as double,",
+				"          FiscalMeasures as double,",
+				"          InternationalSupport as double,",
+				"          PublicInfoCampaign as double,",
+				"          TestingPolicy as double,",
+				"          ContactTracing as double,",
+				"          InvestmentInHealthcare as double,",
+				"          InvestmentInVaccines as double,",
+				"          VaccinationPolicy as double,",
+				"          ProtectionOfElderly as double,",
+				"          Wildcard as double,",
+				"          Date as timestamp",
+				"     ),",
+				"     format: 'parquet',",
+				"     partitionFileNames:['Policies2.parquet'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> sink1"
+			]
+		}
+	}
+}

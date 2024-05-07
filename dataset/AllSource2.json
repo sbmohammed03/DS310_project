@@ -1,0 +1,245 @@
+{
+	"name": "AllSource2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SourceTwos"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "source2.parquet",
+				"container": "source2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "1",
+				"type": "UTF8"
+			},
+			{
+				"name": "2",
+				"type": "UTF8"
+			},
+			{
+				"name": "3",
+				"type": "UTF8"
+			},
+			{
+				"name": "4",
+				"type": "UTF8"
+			},
+			{
+				"name": "5",
+				"type": "UTF8"
+			},
+			{
+				"name": "6",
+				"type": "INT96"
+			},
+			{
+				"name": "7",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "8",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "9",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "10",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "11",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "12",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "13",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "14",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "15",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "16",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "17",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "18",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "19",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "20",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "21",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "22",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "23",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "24",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "25",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "26",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "27",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "28",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "29",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "30",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "31",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "32",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "33",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "34",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "35",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "36",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "37",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "38",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "39",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "40",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "41",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "42",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "43",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "44",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "45",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "46",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "47",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "48",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "49",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "50",
+				"type": "UTF8"
+			},
+			{
+				"name": "51",
+				"type": "UTF8"
+			},
+			{
+				"name": "52",
+				"type": "UTF8"
+			},
+			{
+				"name": "53",
+				"type": "UTF8"
+			},
+			{
+				"name": "54",
+				"type": "UTF8"
+			},
+			{
+				"name": "55",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

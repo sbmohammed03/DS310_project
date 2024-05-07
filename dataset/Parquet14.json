@@ -1,0 +1,114 @@
+{
+	"name": "Parquet14",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Policies.parquet",
+				"fileSystem": "odscoviddata"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "CountryName",
+				"type": "UTF8"
+			},
+			{
+				"name": "CountryCode",
+				"type": "UTF8"
+			},
+			{
+				"name": "SchoolClose",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "WorkplaceClose",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "CancelPublicEvents",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "RestrictionsOnGatherings",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "ClosePT",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "SAHReqs",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "MovementRestrictions",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "InternationalTravelControls",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "IncomeSupport",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "DebtContractRelief",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FiscalMeasures",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "InternationalSupport",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "PublicInfoCampaign",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "TestingPolicy",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "ContactTracing",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "InvestmentInHealthcare",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "InvestmentInVaccines",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "VaccinationPolicy",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "ProtectionOfElderly",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "Wildcard",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "Date",
+				"type": "INT96"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

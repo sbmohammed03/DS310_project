@@ -1,0 +1,519 @@
+{
+	"name": "pipeline10",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "CosmosDbSqlApiSource",
+						"preferredRegions": []
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['CountryName']"
+								},
+								"sink": {
+									"name": "CountryName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['CountryCode']"
+								},
+								"sink": {
+									"name": "CountryCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['RegionName']"
+								},
+								"sink": {
+									"name": "RegionName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['RegionCode']"
+								},
+								"sink": {
+									"name": "RegionCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Jurisdiction']"
+								},
+								"sink": {
+									"name": "Jurisdiction",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Date']"
+								},
+								"sink": {
+									"name": "Date",
+									"type": "Date"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C1_School closing']"
+								},
+								"sink": {
+									"name": "SchoolClosingC1",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C1_Flag']"
+								},
+								"sink": {
+									"name": "FlagC1",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C2_Workplace closing']"
+								},
+								"sink": {
+									"name": "WorkPlaceClosingC2",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C2_Flag']"
+								},
+								"sink": {
+									"name": "FlagC2",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C3_Cancel public events']"
+								},
+								"sink": {
+									"name": "CancelEventsC3",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C3_Flag']"
+								},
+								"sink": {
+									"name": "FlagC3",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C4_Restrictions on gatherings']"
+								},
+								"sink": {
+									"name": "RestrictionsOnGatheringsC4",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C4_Flag']"
+								},
+								"sink": {
+									"name": "FlagC4",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C5_Close public transport']"
+								},
+								"sink": {
+									"name": "ClosePubTransC5",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C5_Flag']"
+								},
+								"sink": {
+									"name": "FlagC5",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C6_Stay at home requirements']"
+								},
+								"sink": {
+									"name": "StayAtHomeReqsC6",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C6_Flag']"
+								},
+								"sink": {
+									"name": "FlagC6",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C7_Restrictions on internal movement']"
+								},
+								"sink": {
+									"name": "RestrictionsOnMovementC7",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C7_Flag']"
+								},
+								"sink": {
+									"name": "FlagC7",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['C8_International travel controls']"
+								},
+								"sink": {
+									"name": "InternationalTravelControlsC8",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['E1_Income support']"
+								},
+								"sink": {
+									"name": "IncomeSupportE1",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['E1_Flag']"
+								},
+								"sink": {
+									"name": "FlagE1",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['E2_Debt contract relief']"
+								},
+								"sink": {
+									"name": "DebtContractReliefE2",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['E3_Fiscal measures']"
+								},
+								"sink": {
+									"name": "FiscalMeasuresE3",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['E4_International support']"
+								},
+								"sink": {
+									"name": "InternationalSupportE4",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H1_Public information campaigns']"
+								},
+								"sink": {
+									"name": "PulicInfoCampaignH1",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H1_Flag']"
+								},
+								"sink": {
+									"name": "FlagH1",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H2_Testing policy']"
+								},
+								"sink": {
+									"name": "TestingPolicyH2",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H3_Contact tracing']"
+								},
+								"sink": {
+									"name": "ContactTracingH3",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H4_Emergency investment in healthcare']"
+								},
+								"sink": {
+									"name": "EmergencyInvestmentinHealthcareH4",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H5_Investment in vaccines']"
+								},
+								"sink": {
+									"name": "InvestInVaccinesH5",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H6_Facial Coverings']"
+								},
+								"sink": {
+									"name": "FacialCoveringsH6",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H6_Flag']"
+								},
+								"sink": {
+									"name": "FlagH6",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H7_Vaccination policy']"
+								},
+								"sink": {
+									"name": "VaxPolicyH7",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H7_Flag']"
+								},
+								"sink": {
+									"name": "FlagH7",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H8_Protection of elderly people']"
+								},
+								"sink": {
+									"name": "ProtectElderlyH8",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['H8_Flag']"
+								},
+								"sink": {
+									"name": "FlagH8",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['M1_Wildcard']"
+								},
+								"sink": {
+									"name": "WildcardM1",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['StringencyIndex']"
+								},
+								"sink": {
+									"name": "StringencyIndex",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['StringencyIndexForDisplay']"
+								},
+								"sink": {
+									"name": "StringencyIndexDisplay",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['StringencyLegacyIndex']"
+								},
+								"sink": {
+									"name": "StringencyLegacyIndex",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['StringencyLegacyIndexForDisplay']"
+								},
+								"sink": {
+									"name": "StringencyLecagyIndexForDisplay",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GovernmentResponseIndex']"
+								},
+								"sink": {
+									"name": "GovResponseIndex",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GovernmentResponseIndexForDisplay']"
+								},
+								"sink": {
+									"name": "GovResponseIndexForDisplay",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ContainmentHealthIndex']"
+								},
+								"sink": {
+									"name": "ContainmentHealthIndex",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ContainmentHealthIndexForDisplay']"
+								},
+								"sink": {
+									"name": "ContainmentHealthIndextForDisplay",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EconomicSupportIndex']"
+								},
+								"sink": {
+									"name": "EconomicSupportIndexForDisplay",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EconomicSupportIndexForDisplay']"
+								},
+								"sink": {
+									"name": "EconomicSupportIndexForDisplay",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['id']"
+								},
+								"sink": {
+									"name": "IDColumn",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['_ts']"
+								},
+								"sink": {
+									"name": "TSColumn",
+									"type": "String"
+								}
+							}
+						],
+						"mapComplexValuesToString": false
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "CosmosDbNoSqlContainer3",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Parquet13",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "ChallengeOne"
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-04-11T01:21:48Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

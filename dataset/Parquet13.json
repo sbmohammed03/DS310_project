@@ -1,0 +1,242 @@
+{
+	"name": "Parquet13",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Source2Updated.parquet",
+				"container": "source2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "CountryName",
+				"type": "UTF8"
+			},
+			{
+				"name": "CountryCode",
+				"type": "UTF8"
+			},
+			{
+				"name": "RegionName",
+				"type": "UTF8"
+			},
+			{
+				"name": "RegionCode",
+				"type": "UTF8"
+			},
+			{
+				"name": "Jurisdiction",
+				"type": "UTF8"
+			},
+			{
+				"name": "Date",
+				"type": "INT96"
+			},
+			{
+				"name": "SchoolClose",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagC1",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "WorkplaceClose",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagC2",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "CancelPublicEvents",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagC3",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "RestrictionsOnGatherings",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagC4",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "ClosePT",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagC5",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "SAHReqs",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagC6",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "MovementRestrictions",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagC7",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "InternationalTravelControls",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "IncomeSupport",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagE1",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "DebtContractRelief",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FiscalMeasures",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "InternationalSupport",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "PublicInfoCampaign",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagH1",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "TestingPolicy",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "ContactTracing",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "InvestmentInHealthcare",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "InvestmentInVaccines",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FacialCoverings",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagH6",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "VaccinationPolicy",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagH7",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "ProtectionOfElderly",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "FlagH8",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "Wildcare",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "StringencyIndex",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "StringencyIndexForDisplay",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "StringencyLegacyIndex",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "StringencyLegacyIndexForDisplay",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "GovernmentResponseIndex",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "GovernmentResponseIndexForDisplay",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "ContainmentHealthIndex",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "ContainmentHealthIndexForDisplay",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "EconomicSupportIndex",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "EconomicSupportIndexForDisplay",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "ID",
+				"type": "UTF8"
+			},
+			{
+				"name": "RID",
+				"type": "UTF8"
+			},
+			{
+				"name": "SELF",
+				"type": "UTF8"
+			},
+			{
+				"name": "ETAG",
+				"type": "UTF8"
+			},
+			{
+				"name": "Attachments",
+				"type": "UTF8"
+			},
+			{
+				"name": "TS",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

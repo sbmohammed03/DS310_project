@@ -1,0 +1,37 @@
+{
+	"name": "Parquet12",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "odscoviddata"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "ID",
+				"type": "INT32"
+			},
+			{
+				"name": "Confirmed",
+				"type": "INT32"
+			},
+			{
+				"name": "Confirmed_Change",
+				"type": "INT32"
+			},
+			{
+				"name": "Country_Region",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
